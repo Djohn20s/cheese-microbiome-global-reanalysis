@@ -433,6 +433,18 @@ conf/base/parameters_sra_analyze_wgs.yml
 
 ## 11. Software environment
 
+The workflow uses separate software environments for orchestration and taxonomic profiling. Exported Mamba environments are provided in `environments/`:
+
+- `kedro_cheese_meta.yml` — Kedro orchestration, metadata processing, SRA retrieval utilities, and downstream analysis dependencies.
+
+- `qiime2-amplicon-2026.1.yml` — QIIME2 2026.1 environment used for amplicon profiling with DADA2 and taxonomic classification.
+
+- `motus4.yml` — mOTUs 4.0.4 environment used for WGS taxonomic profiling.
+
+Kraken2 was executed as a system-installed executable (`Kraken2 2.1.2`) rather than through a dedicated Mamba environment. The Kraken2 database itself is not distributed with this repository because of its size; the expected repository-relative database location is configured in `conf/base/parameters_sra_analyze_wgs.yml`.
+
+The pipeline invokes the QIIME2 and mOTUs environments through `mamba run`, allowing the main Kedro workflow to remain in the `kedro_cheese_meta` environment.
+
 Python project configuration and dependencies are provided in
 `pyproject.toml` and `requirements.txt`.
 

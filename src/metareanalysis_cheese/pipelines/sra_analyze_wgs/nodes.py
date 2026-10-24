@@ -299,7 +299,7 @@ def analyze_wgs_from_manifest(
             if fastq_mode == "PE":
                 cmd_m = (
                     f"mkdir -p '{out_dir}'; "
-                    f"mamba run -n mOTUs4 motus profile "
+                    f"mamba run -n motus4 motus profile "
                     f"-f '{r1}' -r '{r2}' "
                     f"-n '{run}' -t {threads} "
                     f"-o '{motus_tsv}' "
@@ -309,7 +309,7 @@ def analyze_wgs_from_manifest(
             else:
                 cmd_m = (
                     f"mkdir -p '{out_dir}'; "
-                    f"mamba run -n mOTUs4 motus profile "
+                    f"mamba run -n motus4 motus profile "
                     f"-s '{se}' "
                     f"-n '{run}' -t {threads} "
                     f"-o '{motus_tsv}' "
