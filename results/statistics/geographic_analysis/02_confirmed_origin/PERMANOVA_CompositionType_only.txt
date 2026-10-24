@@ -1,0 +1,12 @@
+Permutation test for adonis under reduced model
+Terms added sequentially (first to last)
+Permutation: free
+Number of permutations: 999
+
+adonis2(formula = bc ~ Cluster, data = model_meta, permutations = permutations, by = "terms")
+         Df SumOfSqs      R2      F Pr(>F)    
+Cluster   4   2.7182 0.16332 3.0745  0.001 ***
+Residual 63  13.9251 0.83668                  
+Total    67  16.6433 1.00000                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

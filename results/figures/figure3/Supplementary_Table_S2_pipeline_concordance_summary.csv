@@ -1,0 +1,4 @@
+analysis_set,n_pairwise_comparisons,n_common_genera,mean_n_filtered_genera,mean_prevalence_rho_all,min_prevalence_rho_all,max_prevalence_rho_all,mean_abundance_rho_all,min_abundance_rho_all,max_abundance_rho_all,mean_prevalence_rho_filtered,min_prevalence_rho_filtered,max_prevalence_rho_filtered,mean_abundance_rho_filtered,min_abundance_rho_filtered,max_abundance_rho_filtered,mean_detected_jaccard,min_detected_jaccard,max_detected_jaccard
+all_harmonised_genera,3,4856,204,0.4054,0.2887,0.5884,0.303,0.1941,0.3979,0.3035,0.1811,0.5101,0.2601,0.0665,0.5639,0.2359,0.1484,0.3909
+selected_top30_genera,3,30,29.6667,0.5238,0.4521,0.5643,0.7057,0.5991,0.871,0.5081,0.4521,0.555,0.7011,0.5991,0.8571,0.9556,0.9333,1
+plotted_biological_group_genera,3,27,27,0.5138,0.4716,0.5762,0.7084,0.6081,0.859,0.5138,0.4716,0.5762,0.7084,0.6081,0.859,0.9753,0.963,1

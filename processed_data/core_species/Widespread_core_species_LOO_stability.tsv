@@ -1,0 +1,15 @@
+Species	n_iterations_core	n_iterations_total	fraction_iterations_core
+Brevibacterium aurantiacum	20	20	1
+Enterococcus faecalis	20	20	1
+Lacticaseibacillus paracasei	20	20	1
+Lacticaseibacillus rhamnosus	20	20	1
+Lactiplantibacillus plantarum	20	20	1
+Lactobacillus delbrueckii	20	20	1
+Lactococcus cremoris	20	20	1
+Lactococcus lactis	20	20	1
+Leuconostoc mesenteroides	20	20	1
+Staphylococcus equorum	20	20	1
+Streptococcus thermophilus	20	20	1
+Leuconostoc falkenbergense	10	20	0.5
+Corynebacterium casei	9	20	0.45
+Lactobacillus helveticus	9	20	0.45

@@ -1,0 +1,5 @@
+"Component","R2","Percent","Definition"
+"Country unique",0.338100782552437,33.8100782552437,"Country-associated fraction remaining after accounting for composition type."
+"Shared country-composition type",0.0733481163077445,7.33481163077445,"Fraction jointly attributable to country and composition type in the sequential partition."
+"Composition type unique",0.0899744231202312,8.99744231202312,"Composition-type-associated fraction remaining after accounting for country."
+"Residual",0.498576678019587,49.8576678019587,"Unexplained fraction of the community dissimilarity model."

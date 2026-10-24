@@ -1,0 +1,33 @@
+group,strategy,n_sra,n_bioprojects_strategy,n_unique_bioprojects
+Australia,AMPLICON,40,1,1
+Brazil,AMPLICON,98,2,4
+Brazil,WGS,34,2,4
+Bulgaria,WGS,1,1,1
+China,AMPLICON,69,3,4
+China,WGS,4,1,4
+Cyprus,AMPLICON,12,1,1
+Ecuador,AMPLICON,4,1,1
+France,AMPLICON,4958,7,8
+France,WGS,10,1,8
+Greece,AMPLICON,63,1,2
+Greece,WGS,1,1,2
+Iran,AMPLICON,21,7,7
+Ireland,AMPLICON,4,1,2
+Ireland,WGS,13,1,2
+Italy,AMPLICON,885,28,32
+Italy,WGS,375,4,32
+Mexico,AMPLICON,69,4,5
+Mexico,WGS,1,1,5
+Norway,AMPLICON,128,1,1
+Poland,AMPLICON,52,2,2
+Portugal,AMPLICON,24,1,1
+Russia,AMPLICON,18,1,1
+Spain,AMPLICON,47,1,2
+Spain,WGS,4,1,2
+Switzerland,AMPLICON,151,4,4
+Turkey,AMPLICON,28,3,4
+Turkey,WGS,5,1,4
+USA,AMPLICON,198,3,9
+USA,WGS,235,6,9
+United Kingdom,AMPLICON,24,1,1
+United Kingdom,WGS,16,1,1

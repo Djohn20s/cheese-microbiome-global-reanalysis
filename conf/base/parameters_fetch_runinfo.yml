@@ -1,0 +1,19 @@
+ncbi:
+  dataset_prefix: cheese_metagenome
+  version: v2
+  topn: 20
+  query: >
+    (
+      cheese
+      AND metagenome
+      NOT (
+        human OR homo OR "Homo sapiens"
+        OR skin OR oral OR saliva OR stool OR feces OR faeces OR gut
+        OR mouse OR murine
+        OR urban OR subway OR building OR indoor OR hospital
+        OR wastewater OR sewage
+        OR soil OR marine OR ocean OR river OR lake OR sediment
+        OR compost OR sludge OR biocrust
+        OR bioreactor OR reactor
+      )
+    )

@@ -1,0 +1,5 @@
+"Analysis","Subset","N_BioProjects","N_Countries","Grouping_variable","PERMDISP_F","PERMDISP_p","Permutations","Distance","Interpretation"
+"Primary geographic association","All single-origin BioProjects",73,20,"Country",4.48427321267907,0.001,999,"Bray-Curtis on Hellinger-transformed profiles","Significant heterogeneity of multivariate dispersion; primary PERMANOVA must not be interpreted solely as centroid separation."
+"Replicated-country sensitivity","Countries represented by >=2 BioProjects",63,10,"Country",1.42449973580351,0.197,999,"Bray-Curtis on Hellinger-transformed profiles","PERMDISP did not reach statistical significance in the replicated-country sensitivity subset."
+"Composition-type subset","Starter-positive, single-origin BioProjects",68,20,"Country",6.3629568380314,0.001,999,"Bray-Curtis on Hellinger-transformed profiles","Significant heterogeneity of dispersion among countries in the composition-type subset."
+"Composition-type subset","Starter-positive, single-origin BioProjects",68,20,"Composition type",2.93229583293558,0.034,999,"Bray-Curtis on Hellinger-transformed profiles","Dispersion differs among descriptive composition types."

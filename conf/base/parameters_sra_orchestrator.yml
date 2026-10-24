@@ -1,0 +1,30 @@
+sra_orchestrator:
+  orchestrator_dir: "data/08_reporting/sra_orchestrator"
+
+  # NOWE: uruchamiaj tylko wybraną strategię
+  # wartości: "WGS" | "AMPLICON" | "BOTH"
+  only_strategy: "AMPLICON"
+
+  # odporność na przerwania
+  continue_mode: false         # jeśli true: pomija Runy, które w state.tsv mają status OK
+  rerun_failed: true          # <- dla reanalizy po wysypce zwykle chcesz TRUE
+  stop_on_fail: false         # jeśli true: przerwij całą pętlę na pierwszym FAILED
+
+  # sterowanie startem / pomijaniem
+  start_after_run: ""         # np. "SRR123..." -> wystartuje od następnego
+  skip_runs: []               # lista SRR do pominięcia
+
+  # limity testowe (0 = bez limitu)
+  max_total: 0
+  max_wgs: 0
+  max_amplicon: 0
+
+  # jeśli true: pomijaj runy już obecne w macierzach (kolumny w TSV)
+  # dla reanalizy amplicon, jeśli tax_matrix.tsv mogło być częściowo zapisane albo błędne,
+  # ustaw FALSE żeby nie skipowało.
+  skip_if_done_in_matrices: false
+
+  # poprawka po awarii SRAtool
+  download_backend: "ena_https"
+  ena_timeout_sec: 600
+  ena_retries: 5

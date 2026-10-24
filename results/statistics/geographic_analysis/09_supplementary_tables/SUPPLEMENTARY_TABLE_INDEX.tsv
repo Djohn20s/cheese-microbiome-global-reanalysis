@@ -1,0 +1,10 @@
+Suggested_table	File	Purpose
+"Table S_origin"	"01_origin_audit/S01_Amplicon_BioProject_origin_audit.tsv"	"Audit of sequencing-center country versus confirmed sample-origin country"
+"Table S_country_coverage"	"01_origin_audit/S04_confirmed_origin_country_coverage.tsv"	"Country representation after restricting to confirmed sample origins"
+"Table S_Figure4_PERMANOVA"	"02_confirmed_origin/PERMANOVA_confirmed_origin_country_composition_type.tsv"	"Main revised Figure 4 PERMANOVA models"
+"Table S_Figure4_PERMDISP"	"02_confirmed_origin/PERMDISP_confirmed_origin.tsv"	"Main revised Figure 4 dispersion diagnostics"
+"Table S_balanced"	"04_balanced_subsampling/balanced_subsampling_summary.tsv"	"Sensitivity to unequal numbers of BioProjects among countries"
+"Table S_cluster_validation"	"05_cluster_validation/cluster_validation_combined.tsv"	"Silhouette evaluation and reproducibility across repeated k-means initializations"
+"Table S_starter_removed"	"06_starter_removed/PERMANOVA_country_after_removing_5_starter_genera.tsv"	"Geographic association after removing the five genera used to define composition types"
+"Table S_continuous_starter"	"07_continuous_starter/Country_effect_after_continuous_starter_proportions.tsv"	"Geographic association after accounting for continuous starter-associated genus proportions"
+"Table S_methods"	"09_supplementary_tables/S_Methods_exact_analysis_specification.tsv"	"Exact statistical specification requested by Reviewer 3"

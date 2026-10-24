@@ -1,0 +1,23 @@
+sra_analyze_amplicon:
+  threads: 32
+  results_dir: "data/08_reporting/sra_profile_amplicon/results"
+  matrices_dir: "data/08_reporting/sra_profile_amplicon/matrices"
+
+  cleanup_staged_fastq: false
+  cleanup_results_dir: false
+
+  qiime2_env: "qiime2-amplicon-2026.1"
+  silva_classifier_qza: "external_resources/silva-138-99-nb-classifier.qza"
+
+  tax_level: "genus"
+  trunc_len_f: 0
+  trunc_len_r: 0
+  trunc_len_s: 0
+
+  target_run: ""          # np. SRR28883594
+  skip_if_done: false     # dla reanalizy zwykle false
+
+  log_hub_dir: "data/08_reporting/sra_orchestrator/logs"
+
+  add_total_reads_row: true
+  add_unassigned_row: true

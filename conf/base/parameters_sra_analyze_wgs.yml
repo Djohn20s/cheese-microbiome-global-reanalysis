@@ -1,0 +1,15 @@
+sra_analyze_wgs:
+  threads: 28
+  results_dir: "data/08_reporting/sra_profile_wgs/results"
+  matrices_dir: "data/08_reporting/sra_profile_wgs/matrices"
+  kraken_db: "external_resources/kraken2_db"
+  cleanup_staged_fastq: true
+  cleanup_results_dir: true
+
+  # -------------------
+  # NOWE (dla pętli/orchestratora)
+  # -------------------
+  target_run: ""                 # jeśli != "" → analizuj tylko ten SRR
+  skip_if_done: true             # jeśli kolumna SRR już jest w matrices → SKIP analizy
+  log_hub_dir: "data/08_reporting/sra_orchestrator/logs"   # wspólne logi per run
+  cleanup_results_dir_force: false  # opcjonalnie: gdybyś chciał usuwać nawet przy FAILED (domyślnie nie)

@@ -1,0 +1,10 @@
+group,strategy,n_sra,n_bioprojects_strategy,n_unique_bioprojects
+Asia,AMPLICON,90,10,11
+Asia,WGS,4,1,11
+Australia/Oceania,AMPLICON,40,1,1
+Europe,AMPLICON,6394,52,59
+Europe,WGS,425,8,59
+North America,AMPLICON,267,7,14
+North America,WGS,236,7,14
+South America,AMPLICON,102,3,5
+South America,WGS,34,2,5

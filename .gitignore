@@ -1,0 +1,51 @@
+# Credentials and local configuration
+credentials.yml
+conf/local/
+.env
+*.key
+*.pem
+
+# Raw sequencing data
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.sra
+
+# External databases and resources
+database/
+databases/
+kraken_db/
+silva/
+external_resources/
+
+# Working and temporary data
+work/
+tmp/
+temp/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+Rplots.pdf
+
+# Logs
+*.log
+results/*.log
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+
+# Development history — not part of publication workflow
+archive/

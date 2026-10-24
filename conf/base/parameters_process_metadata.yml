@@ -1,0 +1,66 @@
+process_metadata:
+  stage1:
+    scientificname_whitelist:
+      - food fermentation metagenome
+      - food metagenome
+      - dairy metagenome
+      - milk metagenome
+      - cheese metagenome
+      - food production metagenome
+      - fermentation metagenome
+
+    blacklist_regex: >-
+      \b(
+      human|homo sapiens|
+      mouse|murine|
+      gut|stool|feces|faeces|
+      oral|saliva|skin|
+      wastewater|sewage|sludge|
+      soil|sediment|
+      marine|ocean|river|lake|
+      urban|subway|building|indoor|hospital|
+      bioreactor|reactor|digester|anaerobic|
+      biofilm
+      )\b
+
+    text_fields:
+      - ScientificName
+      - Title
+      - Sample_Title
+      - SampleName
+      - DesignDescription
+      - Sample_Description
+      - CenterName
+      - BioProject
+      - BioSample
+
+    keep_nonwhitelisted: false
+    drop_unknown_continent: false
+
+  stage1_summary:
+    dataset_prefix: cheese_metagenome
+    version: v2
+    top: 20
+
+  stage3:
+    scientificname_whitelist:
+      - food fermentation metagenome
+      - food metagenome
+      - dairy metagenome
+      - milk metagenome
+      - cheese metagenome
+      - food production metagenome
+      - fermentation metagenome
+
+    require_librarysource: METAGENOMIC
+    allowed_strategy: [AMPLICON, WGS]
+    keep_thr: 0.80
+    drop_thr: 0.20
+    min_runs: 5
+    manual_template_path: work/metadata/bioprojects_manual_TEMPLATE.tsv
+    manual_filled_path: metadata/curation/bioprojects_manual_FILLED.tsv
+
+  final_summary:
+    dataset_prefix: cheese_metagenome
+    version: v2
+    top: 20

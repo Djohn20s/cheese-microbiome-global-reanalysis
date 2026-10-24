@@ -1,0 +1,25 @@
+Species	Pipeline	prevalence	detected_n	denominator	count_label	label_side	label_x	label_hjust
+Lactococcus lactis	Kraken2	0.95	19	20	19/20	right	96	0
+Lactococcus cremoris	Kraken2	0.85	17	20	17/20	right	86	0
+Streptococcus thermophilus	Kraken2	0.95	19	20	19/20	right	96	0
+Lacticaseibacillus paracasei	Kraken2	0.7	14	20	14/20	right	71	0
+Leuconostoc mesenteroides	Kraken2	0.65	13	20	13/20	right	66	0
+Staphylococcus equorum	Kraken2	0.65	13	20	13/20	right	66	0
+Lactiplantibacillus plantarum	Kraken2	0.7	14	20	14/20	right	71	0
+Brevibacterium aurantiacum	Kraken2	0.55	11	20	11/20	left	54	1
+Lacticaseibacillus rhamnosus	Kraken2	0.55	11	20	11/20	left	54	1
+Lactobacillus delbrueckii	Kraken2	0.55	11	20	11/20	left	54	1
+Enterococcus faecalis	Kraken2	0.55	11	20	11/20	right	56	0
+Leuconostoc falkenbergense	Kraken2	0.5	10	20	10/20	left	49	1
+Lactococcus lactis	mOTUs	0.894736842105263	17	19	17/19	left	88.4736842105263	1
+Lactococcus cremoris	mOTUs	0.842105263157895	16	19	16/19	left	83.2105263157895	1
+Streptococcus thermophilus	mOTUs	0.842105263157895	16	19	16/19	left	83.2105263157895	1
+Lacticaseibacillus paracasei	mOTUs	0.631578947368421	12	19	12/19	left	62.1578947368421	1
+Leuconostoc mesenteroides	mOTUs	0.631578947368421	12	19	12/19	left	62.1578947368421	1
+Staphylococcus equorum	mOTUs	0.631578947368421	12	19	12/19	left	62.1578947368421	1
+Lactiplantibacillus plantarum	mOTUs	0.578947368421053	11	19	11/19	left	56.8947368421053	1
+Brevibacterium aurantiacum	mOTUs	0.578947368421053	11	19	11/19	right	58.8947368421053	0
+Lacticaseibacillus rhamnosus	mOTUs	0.578947368421053	11	19	11/19	right	58.8947368421053	0
+Lactobacillus delbrueckii	mOTUs	0.578947368421053	11	19	11/19	right	58.8947368421053	0
+Enterococcus faecalis	mOTUs	0.526315789473684	10	19	10/19	left	51.6315789473684	1
+Leuconostoc falkenbergense	mOTUs	0.578947368421053	11	19	11/19	right	58.8947368421053	0

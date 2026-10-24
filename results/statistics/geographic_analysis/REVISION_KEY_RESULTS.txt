@@ -1,0 +1,64 @@
+REVIEWER 3 — MASTER REVISION ANALYSIS
+=====================================
+
+INPUT
+Original QIIME2 BioProject matrix: 85 BioProjects
+Taxonomic rank: genus
+Composition-associated genera: Lactococcus, Streptococcus, Lacticaseibacillus, Lactobacillus, Leuconostoc
+
+GEOGRAPHIC AUDIT
+BioProjects with a single BioSample-reported sample-origin country: 73
+Countries represented: 20
+BioProjects entering k=5 composition-type analysis: 68
+
+PRIMARY GEOGRAPHIC ANALYSIS
+BioProjects: 73
+Countries: 20
+Country only: Df=19, R2=0.3656, F=1.6078, p=0.001
+Country PERMDISP: F=4.4843, p=0.001
+
+REPLICATED-COUNTRY SENSITIVITY (>=2 BIOPROJECTS/COUNTRY)
+BioProjects: 63
+Countries: 10
+Country only: Df=9, R2=0.2839, F=2.3345, p=0.001
+Country PERMDISP: F=1.4245, p=0.197
+
+COMPOSITION-TYPE ANALYSIS
+BioProjects: 68
+Composition type only: Df=4, R2=0.1633, F=3.0745, p=0.001
+Country after composition type: Df=19, R2=0.3381, F=1.5704, p=0.001
+Composition type after country: Df=4, R2=0.0900, F=1.9851, p=0.001
+Country PERMDISP in composition-type subset: F=6.3630, p=0.001
+
+BALANCED SUBSAMPLING
+Iterations: 1000
+Countries: 8
+BioProjects/country: 3
+Median R2: 0.4309
+95% empirical interval R2: 0.3782 - 0.4996
+Fraction PERMANOVA p<=0.05: 0.9940
+Fraction PERMDISP p<=0.05: 0.0000
+
+CLUSTER VALIDATION
+Best k by mean silhouette: 10
+Best k by median ARI stability: 2
+k=5 mean silhouette: 0.3228
+k=5 median ARI: 1.0000
+k=5 95% ARI interval: 1.0000 - 1.0000
+
+STARTER-GENUS REMOVAL SENSITIVITY
+Removed genera: Lactococcus, Streptococcus, Lacticaseibacillus, Lactobacillus, Leuconostoc
+Country after removal: Df=19, R2=0.3585, F=1.5586, p=0.001
+
+CONTINUOUS STARTER-PROPORTION SENSITIVITY
+Reference proportion omitted: Lacticaseibacillus
+Country after continuous starter proportions: Df=19, R2=0.3058, F=1.5580, p=0.001
+
+METHODS
+Community transformation: Hellinger
+Distance: Bray-Curtis
+PERMANOVA permutations: 999
+PERMANOVA R2: unadjusted R2 returned by vegan::adonis2
+Dispersion: vegan::betadisper followed by permutest
+
+All outputs: /mnt/newdisk/Pub_Ext_A/Kedro_project/metareanalysis-cheese/cheese-microbiome-global-reanalysis/results/statistics/geographic_analysis

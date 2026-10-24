@@ -1,0 +1,44 @@
+sra_fetch_unpack:
+  # Limity: 0 = bez limitu
+  max_runs_wgs: 1
+  max_runs_amplicon: 1
+
+  # fasterq/prefetch
+  threads: 8
+
+  # RAM work (prefetch + fasterq)
+  ram_work_dir: "/dev/shm/cheese_sra_work"
+
+  # HDD staging (tu zostają FASTQ do czasu analizy)
+  hdd_stage_dir: "work/sra_stage_fastq"
+
+  # fallback gdyby ram_work_dir był pusty/None
+  fallback_work_dir: "data/07_model_output/sra_fetch_unpack/_work"
+
+  # Sprzątanie RAM po każdym runie (usuwa SRA+FASTQ+TMP w RAM)
+  cleanup_ram: true
+
+  # sra-tools commands
+  prefetch_cmd: "prefetch {run} --output-directory {sra_dir}"
+
+  fasterq_cmd: >
+    fasterq-dump {run}
+    --outdir {fastq_dir}
+    --temp {tmp_dir}
+    --threads {threads}
+    --split-files
+    --skip-technical
+
+  # -------------------
+  # NOWE (dla pętli/orchestratora)
+  # -------------------
+  target_run: ""                 # jeśli != "" → fetch tylko ten SRR
+  skip_existing_stage: true       # jeśli FASTQ już są w staged_fastq_dir → SKIP download
+  log_hub_dir: "data/08_reporting/sra_orchestrator/logs"   # wspólne logi per run
+
+
+  # Po awarii SRA-tools 
+  download_backend: "ena_https"     # albo "sratools"
+  ena_timeout_sec: 600
+  ena_retries: 5
+  ena_user_agent: "metareanalysis-cheese/1.0"

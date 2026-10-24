@@ -1,0 +1,113 @@
+BioProject	n_SRA	n_BioSamples	n_confirmed_origin_SRA	n_confirmed_origin_BioSamples	pct_SRA_confirmed_origin	n_confirmed_countries	confirmed_countries	ProjectOriginStatus	Country_original	n_agreement_SRA	n_disagreement_SRA
+PRJEB31234	12	1	12	1	100.0	1	Cyprus	single_country		0	0
+PRJEB36799	96	96	96	96	100.0	1	France	single_country		0	0
+PRJEB39332	60	60	60	60	100.0	3	France;Italy;Spain	multi_country		0	0
+PRJEB44083	40	24	40	24	100.0	1	United Kingdom	single_country		0	0
+PRJEB44120	81	81	81	81	100.0	1	France	single_country		0	0
+PRJEB4899	2	1	0	0	0.0	0		no_confirmed_origin		0	0
+PRJEB50379	109	109	109	109	100.0	1	France	single_country		0	0
+PRJEB64600	2296	2296	2296	2296	100.0	1	France	single_country		0	0
+PRJEB64628	2292	2292	2292	2292	100.0	1	France	single_country		0	0
+PRJEB85759	63	63	63	63	100.0	1	Greece	single_country		0	0
+PRJNA1051669	84	83	84	83	100.0	1	Canada	single_country		0	0
+PRJNA1094419	165	165	165	165	100.0	3	Ireland;Italy;Spain	multi_country		0	0
+PRJNA1101238	24	24	24	24	100.0	1	Italy	single_country		0	0
+PRJNA1106671	106	106	106	106	100.0	1	Canada	single_country		0	0
+PRJNA1106739	129	129	129	129	100.0	1	Canada	single_country		0	0
+PRJNA1126120	4	4	4	4	100.0	1	Italy	single_country		0	0
+PRJNA1133970	36	36	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA1134076	6	6	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA1148047	60	60	60	60	100.0	1	Switzerland	single_country		0	0
+PRJNA1160470	39	39	39	39	100.0	1	Italy	single_country		0	0
+PRJNA1162746	54	54	54	54	100.0	1	Switzerland	single_country		0	0
+PRJNA1162899	32	31	32	31	100.0	1	USA	single_country		0	0
+PRJNA1170314	128	128	128	128	100.0	1	Norway	single_country		0	0
+PRJNA1204996	9	9	9	9	100.0	1	Mexico	single_country		0	0
+PRJNA1206071	185	185	185	185	100.0	1	Italy	single_country		0	0
+PRJNA1233774	1	1	1	1	100.0	1	Iran	single_country		0	0
+PRJNA1251620	1	1	1	1	100.0	1	Iran	single_country		0	0
+PRJNA1253302	1	1	1	1	100.0	1	Iran	single_country		0	0
+PRJNA1254231	1	1	1	1	100.0	1	Iran	single_country		0	0
+PRJNA1255747	1	1	1	1	100.0	1	Iran	single_country		0	0
+PRJNA1256684	1	1	1	1	100.0	1	Iran	single_country		0	0
+PRJNA1264968	3	3	3	3	100.0	1	Italy	single_country		0	0
+PRJNA1298803	6	6	6	6	100.0	1	Italy	single_country		0	0
+PRJNA1299160	11	11	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA1299165	11	11	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA1345074	1	1	1	1	100.0	1	Bulgaria	single_country		0	0
+PRJNA1345581	4	4	4	4	100.0	1	Ireland	single_country		0	0
+PRJNA1354512	27	27	27	27	100.0	1	USA	single_country		0	0
+PRJNA1379453	4	4	4	4	100.0	1	Italy	single_country		0	0
+PRJNA230456	27	27	27	27	100.0	1	Italy	single_country		0	0
+PRJNA238397	22	22	22	22	100.0	1	Italy	single_country		0	0
+PRJNA255096	39	39	39	39	100.0	1	Italy	single_country		0	0
+PRJNA277133	37	37	37	37	100.0	1	Italy	single_country		0	0
+PRJNA286900	1	1	1	1	100.0	1	Mexico	single_country		0	0
+PRJNA294953	11	6	11	6	100.0	1	Italy	single_country		0	0
+PRJNA297502	48	48	48	48	100.0	1	Italy	single_country		0	0
+PRJNA311540	38	38	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA316626	17	17	17	17	100.0	1	Mexico	single_country		0	0
+PRJNA316715	17	17	17	17	100.0	1	Mexico	single_country		0	0
+PRJNA316789	32	32	32	32	100.0	1	Italy	single_country		0	0
+PRJNA317307	7	7	7	7	100.0	1	Italy	single_country		0	0
+PRJNA319425	15	15	15	15	100.0	1	Iran	single_country		0	0
+PRJNA347428	1	1	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA379167	15	15	15	15	100.0	1	Italy	single_country		0	0
+PRJNA382370	92	92	92	92	100.0	1	USA	single_country		0	0
+PRJNA430402	36	36	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA476771	4	4	4	4	100.0	1	Ecuador	single_country		0	0
+PRJNA497596	13	13	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA514241	27	27	27	27	100.0	1	Brazil	single_country		0	0
+PRJNA522969	14	14	14	14	100.0	1	Brazil	single_country		0	0
+PRJNA523139	108	108	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA526725	26	26	26	26	100.0	1	Brazil	single_country		0	0
+PRJNA529382	69	69	69	69	100.0	1	Italy	single_country		0	0
+PRJNA542786	4	4	4	4	100.0	1	Italy	single_country		0	0
+PRJNA551421	112	112	112	112	100.0	1	Italy	single_country		0	0
+PRJNA574054	33	33	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA591223	63	63	63	63	100.0	1	USA	single_country		0	0
+PRJNA596087	21	21	21	21	100.0	1	Italy	single_country		0	0
+PRJNA603093	108	108	108	108	100.0	1	USA	single_country		0	0
+PRJNA605603	18	18	18	18	100.0	1	China	single_country		0	0
+PRJNA606699	12	12	12	12	100.0	1	Italy	single_country		0	0
+PRJNA608625	36	36	36	36	100.0	1	China	single_country		0	0
+PRJNA616456	102	102	102	102	100.0	1	Italy	single_country		0	0
+PRJNA626588	58	58	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA630777	5	5	5	5	100.0	1	China	single_country		0	0
+PRJNA637891	4	4	4	4	100.0	1	Poland	single_country		0	0
+PRJNA642396	10	10	10	10	100.0	1	France	single_country		0	0
+PRJNA643290	45	45	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA644819	54	54	54	54	100.0	1	Italy	single_country		0	0
+PRJNA673975	40	40	40	40	100.0	1	Australia	single_country		0	0
+PRJNA681198	26	26	26	26	100.0	1	Mexico	single_country		0	0
+PRJNA683931	8	8	8	8	100.0	3	China;Greece;Italy	multi_country		0	0
+PRJNA685292	36	36	36	36	100.0	1	France	single_country		0	0
+PRJNA685310	48	24	48	24	100.0	1	France	single_country		0	0
+PRJNA687545	363	363	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA687606	15	15	15	15	100.0	1	China	single_country		0	0
+PRJNA693797	15	15	15	15	100.0	1	Brazil	single_country		0	0
+PRJNA695135	69	69	69	69	100.0	1	Italy	single_country		0	0
+PRJNA722121	2	2	2	2	100.0	1	Greece	single_country		0	0
+PRJNA723623	24	24	24	24	100.0	1	Portugal	single_country		0	0
+PRJNA747701	19	19	19	19	100.0	1	Brazil	single_country		0	0
+PRJNA748599	83	83	83	83	100.0	1	Italy	single_country		0	0
+PRJNA767354	72	72	72	72	100.0	1	Brazil	single_country		0	0
+PRJNA767413	130	130	0	0	0.0	0		no_confirmed_origin		0	0
+PRJNA778418	33	18	33	18	100.0	1	USA	single_country		0	0
+PRJNA786903	21	21	21	21	100.0	1	Switzerland	single_country		0	0
+PRJNA789261	18	18	18	18	100.0	1	Russia	single_country		0	0
+PRJNA822930	47	47	47	47	100.0	1	Spain	single_country		0	0
+PRJNA853785	63	63	63	63	100.0	1	USA	single_country		0	0
+PRJNA865583	8	8	8	8	100.0	1	Turkey	single_country		0	0
+PRJNA893874	8	8	8	8	100.0	1	Italy	single_country		0	0
+PRJNA924124	8	8	8	8	100.0	1	Italy	single_country		0	0
+PRJNA927028	48	48	48	48	100.0	1	Poland	single_country		0	0
+PRJNA933148	54	54	54	54	100.0	1	Italy	single_country		0	0
+PRJNA937653	16	16	16	16	100.0	1	Switzerland	single_country		0	0
+PRJNA944373	14	14	14	14	100.0	1	USA	single_country		0	0
+PRJNA951084	5	5	5	5	100.0	1	Turkey	single_country		0	0
+PRJNA962271	1	1	1	1	100.0	1	USA	single_country		0	0
+PRJNA993662	10	10	10	10	100.0	1	Turkey	single_country		0	0
+PRJNA993704	10	10	10	10	100.0	1	Turkey	single_country		0	0
+PRJNA996329	6	6	6	6	100.0	1	Italy	single_country		0	0
+PRJNA997145	4	4	4	4	100.0	1	Italy	single_country		0	0

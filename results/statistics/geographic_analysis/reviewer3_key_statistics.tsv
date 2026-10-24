@@ -1,0 +1,7 @@
+Analysis	n_BioProjects	n_Countries	Df	R2	F	p
+"Confirmed origin: Country only"	68	20	19	0.411448898860182	1.7661165661554	0.001
+"Confirmed origin: Country after composition type"	68	20	19	0.338100782552437	1.5704108671697	0.001
+"Confirmed origin >=2 projects/country: Country only"	58	10	9	0.317412498089784	2.48007274047851	0.001
+"Confirmed origin >=2 projects/country: Country after composition type"	58	10	9	0.238452980562239	2.0160755706446	0.001
+"Country after removing five starter-associated genera"	73	20	19	0.358463004919854	1.55863672189636	0.001
+"Country after continuous starter proportions"	68	20	19	0.305759538206821	1.55803116389064	0.001

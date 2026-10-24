@@ -1,0 +1,7 @@
+Stage	n_BioProjects	n_Countries
+"Original Figure-4 QIIME2 matrix"	85	19
+"Single confirmed BioSample-reported sample-origin country"	73	20
+"Primary geographic analysis"	73	20
+"Geographic sensitivity: countries with >=2 BioProjects"	63	10
+"Nonzero five-genus composition for composition-type analyses"	68	20
+"Balanced geographic sensitivity per iteration"	24	8

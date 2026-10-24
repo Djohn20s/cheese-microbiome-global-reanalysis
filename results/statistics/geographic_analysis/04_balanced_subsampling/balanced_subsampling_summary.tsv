@@ -1,0 +1,16 @@
+Metric	Value
+"Number of iterations"	1000
+"Countries"	8
+"BioProjects per country"	3
+"BioProjects per iteration"	24
+"Median R2"	0.430881633028585
+"R2 2.5 percentile"	0.378243496099967
+"R2 97.5 percentile"	0.49961726514548
+"Mean R2"	0.433488035227999
+"SD R2"	0.0321742179904034
+"Median F"	1.73052280873818
+"Fraction PERMANOVA p<=0.05"	0.994
+"Fraction PERMANOVA p<=0.01"	0.837
+"Fraction PERMANOVA p<=0.001"	0.427
+"Median PERMDISP F"	0.495648262618975
+"Fraction PERMDISP p<=0.05"	0
