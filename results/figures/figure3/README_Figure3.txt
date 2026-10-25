@@ -17,7 +17,7 @@ Concordance statistics:
 - pairwise Spearman correlation of mean relative abundance
 - pairwise Jaccard index of detected genera
 - statistics exported for all genera, selected top 30 genera, and plotted biological-group genera
-- filtered concordance threshold: prevalence >= 10% or mean abundance >= 0.01% in at least one pipeline
+- filtered concordance threshold: prevalence >= 10% in at least one pipeline AND mean abundance >= 0.01% in at least one pipeline
 
 Excluded taxa:
 Homo, Mus, Rattus, Bos, Sus, Gallus, Canis, Felis, Unknown, Unclassified, unclassified, Mitochondria, Skunavirus, Escherichia-Shigella, Macrococcus, Mammaliicoccus

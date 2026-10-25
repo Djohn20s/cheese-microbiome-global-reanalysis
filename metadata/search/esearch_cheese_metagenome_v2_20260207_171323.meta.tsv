@@ -1,0 +1,2 @@
+timestamp_utc	sra_count	runinfo_snapshot	query_file	header_preview	lines	center_map	center_map_template
+2026-02-07T17:13:23Z	14190	data/01_raw/ncbi/runinfo_cheese_metagenome_v2_20260207_171323.csv	data/01_raw/ncbi/queries/esearch_cheese_metagenome_v2_20260207_171323.query	Run,ReleaseDate,LoadDate,spots,bases,spots_with_mates,avgLength,size_MB,AssemblyName,download_path,Experiment,LibraryName,LibraryStrategy,LibrarySelection,LibrarySource,LibraryLayout,InsertSize,Insert	14204	data/01_raw/ncbi/center_continent_map.tsv	data/01_raw/ncbi/center_continent_map_TEMPLATE.tsv

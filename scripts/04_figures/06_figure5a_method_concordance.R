@@ -29,7 +29,7 @@ project_dir <- repo_dir
 
 source_file <- file.path(
   project_dir,
-  "processed_data/concordance/Figure5A_REVISED_source_data.csv"
+  "results/figures/figure3/Figure3_pipeline_concordance_statistics_all_genera.csv"
 )
 
 out_dir <- file.path(
@@ -37,29 +37,85 @@ out_dir <- file.path(
   "results/figures/figure5"
 )
 
+supp_dir <- file.path(
+  project_dir,
+  "supplementary"
+)
+
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(supp_dir, recursive = TRUE, showWarnings = FALSE)
 
 if (!file.exists(source_file)) {
-  stop("Missing Figure 5A source data: ", source_file)
+  stop("Missing canonical Figure 3 concordance statistics: ", source_file)
 }
 
 # ============================================================
-# LOAD AUDITED FINAL SOURCE DATA
+# LOAD CANONICAL CONCORDANCE RESULTS
 # ============================================================
 
-dt <- fread(source_file)
+src <- fread(source_file)
 
-# Remove plotting-helper columns if already present in the archived
-# source table; they are reconstructed below.
-drop_cols <- intersect(
-  c("comparison_type", "comparison_label", "value_label", "n_label"),
-  names(dt)
+required_cols <- c(
+  "comparison",
+  "n_common_genera",
+  "n_filtered_genera",
+  "prevalence_spearman_rho_filtered",
+  "prevalence_p_value_filtered",
+  "abundance_spearman_rho_filtered",
+  "abundance_p_value_filtered"
 )
-if (length(drop_cols) > 0) {
-  dt[, (drop_cols) := NULL]
+
+missing_cols <- setdiff(required_cols, names(src))
+
+if (length(missing_cols) > 0) {
+  stop(
+    "Missing required canonical columns: ",
+    paste(missing_cols, collapse = ", ")
+  )
 }
+
+# Convert one row per comparison into two rows:
+# prevalence and mean relative abundance.
+dt <- rbindlist(
+  list(
+    src[, .(
+      comparison,
+      metric = "BioProject prevalence",
+      rho = prevalence_spearman_rho_filtered,
+      p_value = prevalence_p_value_filtered,
+      n_common_genera_raw = n_common_genera,
+      n_common_genera_filtered = n_filtered_genera
+    )],
+
+    src[, .(
+      comparison,
+      metric = "Mean relative abundance",
+      rho = abundance_spearman_rho_filtered,
+      p_value = abundance_p_value_filtered,
+      n_common_genera_raw = n_common_genera,
+      n_common_genera_filtered = n_filtered_genera
+    )]
+  ),
+  use.names = TRUE
+)
 
 dt[, comparison := gsub("_", " ", as.character(comparison))]
+
+# Explicit methodological scope.
+dt[, comparison_scope := fifelse(
+  comparison == "Kraken2 vs mOTUs",
+  "Paired comparison: 19 common WGS BioProjects",
+  "Aggregate cross-collection comparison"
+)]
+
+# S3 uses exactly the same canonical values as Figure 5A.
+fwrite(
+  dt,
+  file.path(
+    supp_dir,
+    "Supplementary_Table_S3_pairwise_genus_concordance.csv"
+  )
+)
 
 # ============================================================
 # CLASSIFY COMPARISONS
@@ -101,38 +157,25 @@ dt[, comparison_type := factor(
 # LABELS
 # ============================================================
 
-dt[, comparison_label := case_when(
-  comparison == "Kraken2 vs mOTUs" ~
-    paste0(
-      "Kraken2 vs mOTUs\n",
-      "283 shared genera; 85 after filtering"
-    ),
-
-  comparison == "QIIME2 vs Kraken2" ~
-    paste0(
-      "QIIME2 vs Kraken2\n",
-      "718 shared genera; 101 after filtering"
-    ),
-
-  comparison == "QIIME2 vs mOTUs" ~
-    paste0(
-      "QIIME2 vs mOTUs\n",
-      "251 shared genera; 100 after filtering"
-    ),
-
-  TRUE ~ as.character(comparison)
+dt[, comparison_label := paste0(
+  as.character(comparison),
+  "\\n",
+  n_common_genera_raw,
+  " shared genera; ",
+  n_common_genera_filtered,
+  " after filtering"
 )]
+
 
 dt[, value_label := sprintf("\u03c1 = %.2f", rho)]
 
 dt[, n_label := paste0("n = ", n_common_genera_filtered)]
 
 # Preserve ordering after construction of labels
-label_levels <- c(
-  "Kraken2 vs mOTUs\n283 shared genera; 85 after filtering",
-  "QIIME2 vs Kraken2\n718 shared genera; 101 after filtering",
-  "QIIME2 vs mOTUs\n251 shared genera; 100 after filtering"
-)
+label_levels <- dt[
+  !duplicated(comparison),
+  comparison_label
+]
 
 dt[, comparison_label := factor(
   comparison_label,

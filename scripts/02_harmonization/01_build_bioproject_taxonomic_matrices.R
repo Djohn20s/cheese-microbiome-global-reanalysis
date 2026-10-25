@@ -45,10 +45,14 @@ if (length(file_arg) == 1) {
   repo_dir <- normalizePath(getwd())
 }
 
-project_dir <- repo_dir
+# Source project containing the large SRA-level input matrices.
+# These files are intentionally not duplicated in the GitHub repository.
+project_dir <- normalizePath(file.path(repo_dir, ".."))
+
+# Publication-ready BioProject-level outputs are written to the repository.
 out_dir <- file.path(
-  project_dir,
-  "data/08_reporting/bioproject_level_audit_amplicon_wgs_v8"
+  repo_dir,
+  "processed_data/bioproject_matrices"
 )
 
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
@@ -553,19 +557,23 @@ aggregate_to_bioproject <- function(dt, metadata, method_name) {
 
   long <- merge(long, md, by = "SampleID", all.x = TRUE)
 
+  # Aggregate strictly to one row per BioProject x Tax.
+  # Platform is descriptive metadata only and must not define the
+  # independent analytical unit. Multi-platform projects are therefore
+  # collapsed to a single BioProject-level profile.
   bp <- long[
     !is.na(BioProject),
     .(
       mean_abundance = mean(Abundance, na.rm = TRUE),
       prevalence_sra = mean(Abundance > 0, na.rm = TRUE),
-      n_sra = uniqueN(SampleID)
+      n_sra = uniqueN(SampleID),
+      CenterName_standardized = paste(sort(unique(na.omit(CenterName_standardized))), collapse = ";"),
+      Continent = paste(sort(unique(na.omit(Continent))), collapse = ";"),
+      Country = paste(sort(unique(na.omit(Country))), collapse = ";"),
+      Platform = paste(sort(unique(na.omit(Platform))), collapse = ";")
     ),
     by = .(
       BioProject,
-      CenterName_standardized,
-      Continent,
-      Country,
-      Platform,
       Tax
     )
   ]
@@ -1532,9 +1540,58 @@ wgs_species_richness_by_genus(motus_species_bp, "mOTUs_WGS_species")
 # METHOD CONCORDANCE
 # ============================================================
 
+# QIIME2 vs WGS comparisons are aggregate cross-collection comparisons.
+# The underlying BioProject collections are independent and therefore
+# these comparisons describe concordance of aggregate taxonomic patterns,
+# not paired method agreement.
 method_concordance(qiime2_prev, kraken_prev, "QIIME2_vs_Kraken2")
 method_concordance(qiime2_prev, motus_prev, "QIIME2_vs_mOTUs")
-method_concordance(kraken_prev, motus_prev, "Kraken2_vs_mOTUs")
+
+# Kraken2 and mOTUs were applied to the same WGS collection.
+# Restrict both matrices to the identical set of BioProjects before
+# calculating prevalence and abundance concordance.
+common_wgs_bioprojects <- intersect(
+  kraken_genus_bp$BioProject,
+  motus_genus_bp$BioProject
+)
+
+kraken_genus_bp_paired <- kraken_genus_bp[
+  BioProject %in% common_wgs_bioprojects
+]
+
+motus_genus_bp_paired <- motus_genus_bp[
+  BioProject %in% common_wgs_bioprojects
+]
+
+message(
+  "Paired Kraken2-mOTUs concordance: ",
+  length(common_wgs_bioprojects),
+  " common BioProjects"
+)
+
+message(
+  "Excluded from paired Kraken2 set: ",
+  paste(
+    setdiff(kraken_genus_bp$BioProject, common_wgs_bioprojects),
+    collapse = ", "
+  )
+)
+
+kraken_prev_paired <- summarise_bioproject_prevalence(
+  kraken_genus_bp_paired,
+  "Kraken2_WGS_genus_paired19"
+)
+
+motus_prev_paired <- summarise_bioproject_prevalence(
+  motus_genus_bp_paired,
+  "mOTUs_WGS_genus_paired19"
+)
+
+method_concordance(
+  kraken_prev_paired,
+  motus_prev_paired,
+  "Kraken2_vs_mOTUs"
+)
 
 # ============================================================
 # DATASET AUDIT PLOTS

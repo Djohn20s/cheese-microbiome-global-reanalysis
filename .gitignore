@@ -49,3 +49,7 @@ results/*.log
 
 # Development history — not part of publication workflow
 archive/
+
+# Python cache
+__pycache__/
+*.py[cod]

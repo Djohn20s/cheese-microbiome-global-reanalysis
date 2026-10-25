@@ -1,11 +1,11 @@
 Reviewer 3 Comment 4 - revised Figure 5A
 
 DIRECT WGS CROSS-PIPELINE COMPARISON:
-Kraken2 vs mOTUs: prevalence rho = 0.485; abundance rho = 0.657; raw genera = 283; filtered genera = 85
+Kraken2 vs mOTUs: prevalence rho = 0.513; abundance rho = 0.654; raw genera = 283; filtered genera = 86
 
 AGGREGATE CROSS-COLLECTION COMPARISONS:
-QIIME2 vs Kraken2: prevalence rho = 0.353; abundance rho = 0.493; raw genera = 718; filtered genera = 101
-QIIME2 vs mOTUs: prevalence rho = 0.254; abundance rho = 0.403; raw genera = 251; filtered genera = 100
+QIIME2 vs Kraken2: prevalence rho = 0.361; abundance rho = 0.482; raw genera = 718; filtered genera = 107
+QIIME2 vs mOTUs: prevalence rho = 0.258; abundance rho = 0.417; raw genera = 251; filtered genera = 99
 
 IMPORTANT INTERPRETATION:
 - Kraken2 vs mOTUs is the direct cross-pipeline WGS comparison.

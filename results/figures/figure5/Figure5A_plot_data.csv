@@ -1,13 +1,7 @@
-comparison,metric,method,rho,p_value,p_value_scientific,n_common_genera_raw,n_common_genera_filtered,prevalence_threshold,mean_abundance_threshold,comparison_type,comparison_label,value_label,n_label
-QIIME2 vs Kraken2,BioProject prevalence,Spearman,0.353233203159261,0.00029087182748205,0.000291,718,101,0.1,0.0001,Aggregate cross-collection comparison,"QIIME2 vs Kraken2
-718 shared genera; 101 after filtering",ρ = 0.35,n = 101
-QIIME2 vs Kraken2,Mean relative abundance,Spearman,0.492521840419336,0.000000167995520161929,0.000000168,718,101,0.1,0.0001,Aggregate cross-collection comparison,"QIIME2 vs Kraken2
-718 shared genera; 101 after filtering",ρ = 0.49,n = 101
-QIIME2 vs mOTUs,BioProject prevalence,Spearman,0.253682889990207,0.0108734240593153,0.0109,251,100,0.1,0.0001,Aggregate cross-collection comparison,"QIIME2 vs mOTUs
-251 shared genera; 100 after filtering",ρ = 0.25,n = 100
-QIIME2 vs mOTUs,Mean relative abundance,Spearman,0.403348334833483,0.0000316891422830922,0.0000317,251,100,0.1,0.0001,Aggregate cross-collection comparison,"QIIME2 vs mOTUs
-251 shared genera; 100 after filtering",ρ = 0.40,n = 100
-Kraken2 vs mOTUs,BioProject prevalence,Spearman,0.484514957299691,0.00000261930049140503,0.00000262,283,85,0.1,0.0001,Direct WGS cross-pipeline comparison,"Kraken2 vs mOTUs
-283 shared genera; 85 after filtering",ρ = 0.48,n = 85
-Kraken2 vs mOTUs,Mean relative abundance,Spearman,0.656673832323627,0.00000000000885959831548544,0.00000000000886,283,85,0.1,0.0001,Direct WGS cross-pipeline comparison,"Kraken2 vs mOTUs
-283 shared genera; 85 after filtering",ρ = 0.66,n = 85
+comparison,metric,rho,p_value,n_common_genera_raw,n_common_genera_filtered,comparison_scope,comparison_type,comparison_label,value_label,n_label
+QIIME2 vs Kraken2,BioProject prevalence,0.360596756035422,0.000135948820452593,718,107,Aggregate cross-collection comparison,Aggregate cross-collection comparison,QIIME2 vs Kraken2\n718 shared genera; 107 after filtering,ρ = 0.36,n = 107
+QIIME2 vs mOTUs,BioProject prevalence,0.257686802068217,0.0100230945047177,251,99,Aggregate cross-collection comparison,Aggregate cross-collection comparison,QIIME2 vs mOTUs\n251 shared genera; 99 after filtering,ρ = 0.26,n = 99
+Kraken2 vs mOTUs,BioProject prevalence,0.513382854874516,0.00000043117272009713,283,86,Paired comparison: 19 common WGS BioProjects,Direct WGS cross-pipeline comparison,Kraken2 vs mOTUs\n283 shared genera; 86 after filtering,ρ = 0.51,n = 86
+QIIME2 vs Kraken2,Mean relative abundance,0.481915789886166,0.000000147593114142207,718,107,Aggregate cross-collection comparison,Aggregate cross-collection comparison,QIIME2 vs Kraken2\n718 shared genera; 107 after filtering,ρ = 0.48,n = 107
+QIIME2 vs mOTUs,Mean relative abundance,0.417402597402597,0.0000172143670339555,251,99,Aggregate cross-collection comparison,Aggregate cross-collection comparison,QIIME2 vs mOTUs\n251 shared genera; 99 after filtering,ρ = 0.42,n = 99
+Kraken2 vs mOTUs,Mean relative abundance,0.654455398839568,0.00000000000825677437622473,283,86,Paired comparison: 19 common WGS BioProjects,Direct WGS cross-pipeline comparison,Kraken2 vs mOTUs\n283 shared genera; 86 after filtering,ρ = 0.65,n = 86

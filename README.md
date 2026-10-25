@@ -166,9 +166,12 @@ conf/base/parameters_sra_analyze_wgs.yml
 
 ### Kraken2
 
-Kraken2 was applied using a locally installed reference database.
-Publication matrices were constructed from Kraken2 report percentages at
-genus (`G`) and species (`S`) ranks.
+Kraken2 was applied using a locally installed nucleotide reference
+database built in **September 2024** and comprising bacterial, archaeal,
+viral, plasmid, human, and UniVec_Core sequence libraries. Database
+inspection indicated **50,084 taxonomic nodes**, with **k = 35** and
+**l = 31**. Publication matrices were constructed from Kraken2 report
+percentages at genus (`G`) and species (`S`) ranks.
 
 Successful Kraken2 profiles were obtained for **634 SRA records from 20
 BioProjects**.
@@ -306,10 +309,10 @@ Rscript scripts/04_figures/03_figure3_genus_prevalence.R
 Genus prevalence uses a **0.0001 relative-abundance (0.01%)** detection
 threshold.
 
-The publication matrices contain 86 QIIME2 rows, 21 Kraken2 rows, and 20
-mOTUs rows. These can include platform-level BioProject strata and are
-not the unique-BioProject denominators used for species-level WGS
-sensitivity analyses.
+The publication matrices contain **85 unique QIIME2 BioProjects,
+20 unique Kraken2 BioProjects, and 19 unique mOTUs BioProjects**.
+Each BioProject is represented by a single BioProject-level profile
+within a given taxonomic profiling pipeline.
 
 ### Figure 4
 
@@ -353,8 +356,9 @@ Rscript scripts/04_figures/08_figure5cd_species_analysis.R
 ```
 
 Kraken2 and mOTUs shared **448 species** before filtering. For panel D,
-**103 species** remained after requiring mean prevalence \>=10% and mean
-relative abundance \>=0.01%.
+**103 species** remained after requiring the **mean prevalence across
+Kraken2 and mOTUs to be \>=10%** and the **mean of the two
+pipeline-specific mean relative abundances to be \>=0.01%**.
 
 Mean species abundances showed:
 

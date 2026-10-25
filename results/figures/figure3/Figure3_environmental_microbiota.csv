@@ -1,10 +1,10 @@
 Group,Tax,Kraken2,QIIME2,mOTUs
-Environmental microbiota,Acinetobacter,66.6666666666667,74.4186046511628,45
-Environmental microbiota,Bacillus,71.4285714285714,29.0697674418605,5
-Environmental microbiota,Clostridium,71.4285714285714,0,10
-Environmental microbiota,Enterobacter,76.1904761904762,2.32558139534884,45
-Environmental microbiota,Klebsiella,61.9047619047619,16.2790697674419,45
-Environmental microbiota,Pseudomonas,85.7142857142857,69.7674418604651,55
-Environmental microbiota,Stenotrophomonas,52.3809523809524,31.3953488372093,10
-Environmental microbiota,Streptomyces,66.6666666666667,4.65116279069768,5
-Environmental microbiota,Vibrio,57.1428571428571,11.6279069767442,40
+Environmental microbiota,Acinetobacter,65,75.2941176470588,47.3684210526316
+Environmental microbiota,Bacillus,70,29.4117647058824,5.26315789473684
+Environmental microbiota,Clostridium,70,0,10.5263157894737
+Environmental microbiota,Enterobacter,75,2.35294117647059,47.3684210526316
+Environmental microbiota,Klebsiella,60,16.4705882352941,47.3684210526316
+Environmental microbiota,Pseudomonas,85,70.5882352941177,57.8947368421053
+Environmental microbiota,Stenotrophomonas,50,31.7647058823529,10.5263157894737
+Environmental microbiota,Streptomyces,65,4.70588235294118,5.26315789473684
+Environmental microbiota,Vibrio,55,11.7647058823529,36.8421052631579

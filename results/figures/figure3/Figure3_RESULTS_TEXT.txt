@@ -9,9 +9,9 @@ Concordance summary:
 # A tibble: 3 × 19
   analysis_set     n_pairwise_comparisons n_common_genera mean_n_filtered_genera
   <chr>                             <dbl>           <dbl>                  <dbl>
-1 all_harmonised_…                      3            4856                  204  
-2 selected_top30_…                      3              30                   29.7
-3 plotted_biologi…                      3              27                   27  
+1 all_harmonised_…                      3             718                   97.3
+2 selected_top30_…                      3              28                   27.7
+3 plotted_biologi…                      3              26                   26  
 # ℹ 15 more variables: mean_prevalence_rho_all <dbl>,
 #   min_prevalence_rho_all <dbl>, max_prevalence_rho_all <dbl>,
 #   mean_abundance_rho_all <dbl>, min_abundance_rho_all <dbl>,
@@ -24,14 +24,14 @@ Pairwise concordance statistics:
 # A tibble: 9 × 23
   comparison        analysis_set               n_common_genera n_filtered_genera
   <chr>             <chr>                                <int>             <int>
-1 QIIME2 vs Kraken2 all_harmonised_genera                 4856               244
-2 QIIME2 vs mOTUs   all_harmonised_genera                 4856               224
-3 Kraken2 vs mOTUs  all_harmonised_genera                 4856               144
-4 QIIME2 vs Kraken2 selected_top30_genera                   30                30
-5 QIIME2 vs mOTUs   selected_top30_genera                   30                30
-6 Kraken2 vs mOTUs  selected_top30_genera                   30                29
-7 QIIME2 vs Kraken2 plotted_biological_group_…              27                27
-8 QIIME2 vs mOTUs   plotted_biological_group_…              27                27
+1 QIIME2 vs Kraken2 all_harmonised_genera                  718               107
+2 QIIME2 vs mOTUs   all_harmonised_genera                  251                99
+3 Kraken2 vs mOTUs  all_harmonised_genera                  283                86
+4 QIIME2 vs Kraken2 selected_top30_genera                   28                28
+5 QIIME2 vs mOTUs   selected_top30_genera                   27                26
+6 Kraken2 vs mOTUs  selected_top30_genera                   29                29
+7 QIIME2 vs Kraken2 plotted_biological_group_…              26                26
+8 QIIME2 vs mOTUs   plotted_biological_group_…              26                25
 9 Kraken2 vs mOTUs  plotted_biological_group_…              27                27
 # ℹ 19 more variables: prevalence_spearman_rho_all <dbl>,
 #   prevalence_p_value_all <dbl>, prevalence_n_all <int>,
